@@ -126,11 +126,13 @@ function calculateFloorHexagram(
     console.error("Invalid hexagram provided.");
     return undefined;
   }
-
+  const polarityPermernet: string =
+    currentInfo.polarity === "" ? "+" : currentInfo.polarity;
   for (let i = 1; i < floor; i++) {
     const nextType = getNextType(currentInfo.type);
-    let nextPolarity: string = currentInfo.polarity;
-    if (nextPolarity === "") nextPolarity = "+";
+    let nextPolarity: string =
+      currentInfo.polarity === "" ? polarityPermernet : currentInfo.polarity;
+
     if (nextType === "水" || nextType === "火") nextPolarity = "";
     currentInfo = {
       type: nextType,
