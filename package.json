@@ -2,7 +2,7 @@
   "name": "feng-shui",
   "private": true,
   "homepage": "https://guanwei514.github.io/feng-shui/",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "start": "vite",
